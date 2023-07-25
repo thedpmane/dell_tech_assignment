@@ -17,27 +17,20 @@ import {
   getAdminProducts,
 } from "../../Redux/Admin/Products/action";
 import { useEffect } from "react";
-import { getAdminAllOrders } from "../../Redux/Admin/Orders/action";
 import { getAdminAllUsers } from "../../Redux/Admin/Users/action";
 import "chartjs-adapter-moment";
 
 const DashboardHome = () => {
   // Redux state selectors
   const { products } = useSelector(AllAdiminProducts);
-  const orderDataList = useSelector((store) => store.allOrders.orders);
+
   const allUserList = useSelector((store) => store.allUsers.users);
 
   const { toast } = createStandaloneToast();
   const dispatch = useDispatch();
 
   // Total Amount Calculation
-  let totalAmount = useMemo(() => {
-    let amount = 0;
-    orderDataList?.forEach((item) => {
-      amount += item.totalPrice;
-    });
-    return amount;
-  }, [orderDataList]);
+  let totalAmount = 0;
 
   // Bar Chart Data
   const options = {
@@ -78,27 +71,6 @@ const DashboardHome = () => {
       },
     },
   };
-
-  const chartData = useMemo(() => {
-    return {
-      labels: orderDataList?.map((order) => order.shippingInfo.state),
-      datasets: [
-        {
-          label: "Total Price",
-          data: orderDataList?.map((order) => order.totalPrice),
-          backgroundColor: orderDataList?.map((order) => {
-            if (order.orderStatus === "Processing") {
-              return "red";
-            } else if (order.orderStatus === "Shipped") {
-              return "yellow";
-            } else if (order.orderStatus === "Delivered") {
-              return "green";
-            }
-          }),
-        },
-      ],
-    };
-  }, [orderDataList]);
 
   // Pie Chart Data
   const pieChartData = useMemo(() => {
@@ -146,31 +118,9 @@ const DashboardHome = () => {
       },
     },
   };
-  const dataset = useMemo(() => {
-    const shippedOrders = orderDataList?.filter(
-      (order) => order.orderStatus === "Delivered"
-    );
-    const xlabels = shippedOrders?.map((order) =>
-      moment(order.deliveredAt).format("YYYY-MM-DD")
-    );
-    const prices = shippedOrders?.map((order) => order.totalPrice);
-    return {
-      labels: xlabels,
-      datasets: [
-        {
-          label: "Total Price",
-          data: prices,
-          fill: false,
-          borderColor: "rgb(54, 162, 235)",
-          tension: 0.4,
-        },
-      ],
-    };
-  }, [orderDataList]);
 
   useEffect(() => {
     dispatch(getAdminProducts(toast));
-    dispatch(getAdminAllOrders());
     dispatch(getAdminAllUsers());
   }, [dispatch]);
 
@@ -225,7 +175,7 @@ const DashboardHome = () => {
             borderRadius="lg"
             p={["1", "2"]}
           >
-            <Bar data={chartData} options={options} />
+            {/* <Bar data={chartData} options={options} /> */}
           </Box>
 
           <Box
@@ -234,7 +184,7 @@ const DashboardHome = () => {
             borderRadius="lg"
             p={["1", "2"]}
           >
-            <Line data={dataset} options={optionsline} />
+            {/* <Line data={dataset} options={optionsline} /> */}
           </Box>
         </Flex>
       </Box>
