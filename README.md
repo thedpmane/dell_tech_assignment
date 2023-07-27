@@ -2,7 +2,9 @@
 
 Dell Tech Assignment is a project developed to showcase my skills and expertise in web development. The purpose of this project is to demonstrate my ability to build a full-stack web application using the latest technologies and best practices
 
-<img src="frontend1/src/Assests/readmeImages/project_logo.png" width="200" height="100" alt="Project Logo">
+<p align="center">
+  <img src="frontend1/src/Assests/readmeImages/project_logo.png" width="100" height="100" alt="Project Logo">
+</p>
 
 ## Table of Contents
 
