@@ -36,7 +36,7 @@ export default function ProductCard({ product }) {
         </Heading>
 
         <Text fontSize="sm" mb={2}>
-          {product.description}
+          {product.description.substring(0, 100)}
         </Text>
 
         <Stack spacing={1}>
