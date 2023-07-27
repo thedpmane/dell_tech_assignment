@@ -1,6 +1,6 @@
-# [Your Project Name]
+# [Dell Tech Assignment]
 
-[Add a brief description or tagline about your project]
+Dell Tech Assignment is a project developed to showcase my skills and expertise in web development. The purpose of this project is to demonstrate my ability to build a full-stack web application using the latest technologies and best practices
 
 ![Project Logo](frontend1/src/Assests/readmeImages/project_logo.png)
 
@@ -60,17 +60,17 @@ The project uses the following technologies:
 
 - Backend:
 
-  - ![Node.js](https://react-icons.github.io/react-icons/icons?icon=fa:node) Node.js
-  - ![Express](https://react-icons.github.io/react-icons/icons?icon=fa:server) Express
-  - ![MongoDB](https://react-icons.github.io/react-icons/icons?icon=fa:database) MongoDB
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=fa:node" width="16" height="16"> Node.js
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=fa:server" width="16" height="16"> Express
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=fa:database" width="16" height="16"> MongoDB
 
 - Frontend:
-  - ![React](https://react-icons.github.io/react-icons/icons?icon=fa:react) React
-  - ![Chakra UI](https://react-icons.github.io/react-icons/icons?icon=vscode-icons:file-type-react) Chakra UI
-  - ![React Redux](https://react-icons.github.io/react-icons/icons?icon=fa:redux) React Redux
-  - ![Chart.js](https://react-icons.github.io/react-icons/icons?icon=bi:bar-chart) Chart.js
-  - ![i18next](https://react-icons.github.io/react-icons/icons?icon=fa:globe) i18next
-  - ![ag-Grid React](https://react-icons.github.io/react-icons/icons?icon=fa:table) ag-Grid React
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=fa:react" width="16" height="16"> React
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=vscode-icons:file-type-react" width="16" height="16"> Chakra UI
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=fa:redux" width="16" height="16"> React Redux
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=bi:bar-chart" width="16" height="16"> Chart.js
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=fa:globe" width="16" height="16"> i18next
+  - <img src="https://react-icons.github.io/react-icons/icons?icon=fa:table" width="16" height="16"> ag-Grid React
 
 ## Installation
 
